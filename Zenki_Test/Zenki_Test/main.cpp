@@ -1,4 +1,4 @@
-
+/*
 第１問(一問2点)
 以下の計算に2進数で答えよ。
 00101100 + 01010101 = 10000001
@@ -18,10 +18,10 @@ double =  ８バイト
 
 第４問(一問2点)
 char* 、int * 、float * 、double * のバイトサイズはそれぞれいくつか答えよ。
-char = 8バイト
-int = 8バイト
-float = 8バイト
-double = 8バイト
+char = 4バイト
+int = 4バイト
+float = 4バイト
+double = 4バイト
 
 第５問(20点)
 以下のプログラムを実行した場合、
@@ -97,7 +97,7 @@ endと入力された場合終了するようにしてください。
 endの入力は1番目の値の場所でも、2番目の値の場所でも、
 別途endの入力を受け付けるようでもどれでもいいです。
 どこか一か所でendと入力して終了していれば正解とします。
-*/
+
 #include <iostream>
 
 int main()
@@ -146,7 +146,7 @@ int main()
     printf("おーわり\n");
 }
 
-/*
+
 第８問(10点)
 以下のプログラムをエラーを解決し、コンパイルエラーがない状態にし、
 実行できるようにしてください。
@@ -154,18 +154,22 @@ int main()
 (途中確認のためにコメントアウトをする分はOKです。)
 間違えている個所は4か所です。
 
+#include <stdio.h>
+#include <iostream>
+#include <string.h>
+
 class Point
 {
 public:
     Point() { Clear(); }
 
-    Clear()
+    void Clear()
     {
         x = 0;
         y = 0;
         z = 0;
     }
-public:
+private:
     int x, y, z;
 }
 
@@ -178,7 +182,7 @@ public:
 
     while (1)
     {
-        if (point.X < nextPoint.x)
+        if (point.x < nextPoint.x)
         {
             point.x++;
         }
@@ -191,7 +195,7 @@ public:
         {
             point.y++;
         }
-        else if (point.y > nextPointy)
+        else if (point.y > nextPoint.y)
         {
             point.y--;
         }
@@ -205,5 +209,6 @@ public:
         }
     }
 }
-
 */
+
+
